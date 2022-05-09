@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Автошкола</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="header__wrapper">
+                <div class="header__first-block">
+                    <div class="header__logo">Логотип</div>
+                    <div class="header__info">
+                        <div class="header__locations">
+                            <img class="header__locations-logo" src="./assets/icons/location.svg" alt="">
+                            <span class="header__locations-text">Выберите адрес</span>
+                            <button class="header__locations-button"></button>
+                            <ul class="header__locations-list">
+                                <li class="header__locations-item"><a class="header__locations-link" href="">Ул. Первая, 5–1</a></li>
+                                <li class="header__locations-item"><a class="header__locations-link" href="">Ул. Вторая, 22–1</a></li>
+                                <li class="header__locations-item"><a class="header__locations-link" href="">Ул. Третья, 119</a></li>
+                                <li class="header__locations-item"><a class="header__locations-link" href="">Ул. Четвертая, 14</a></li>
+                                <li class="header__locations-item"><a class="header__locations-link" href="">Пр. Пятый, 11–1</a></li>
+                            </ul>
+                        </div>
+                        <div class="header__email">
+                            <img class="header__email-logo" src="./assets/icons/email.svg" alt="">
+                            <a class="header__email-text" href="mailto:info@asp.ru">info@asp.ru</a>
+                        </div>
+                        <div class="header__phone">
+                            <img class="header__phone-logo" src="./assets/icons/phone.svg" alt="">
+                            <a class="header__phone-text" href="tel:9999999999">(999) 999-99-99</a>
+                            <a class="header__phone-text" href="tel:1111111111">(111) 111-11-11</a>
+                        </div>
+                    </div>
+                    <div class="header__button">
+                        <button class="header__button-orderCall">Заказать звонок</button>
+                    </div>
+                </div>
+            </div>
+            <div class="header__wrapper-second">
+                <div class="header__second-block">
+                    <nav class="header__navigation">
+                        <ul class="header__nav-list">
+                            <li class="header__nav-item"><a class="header__nav-item-link" href="#">Категории</a></li>
+                            <li class="header__nav-item"><a class="header__nav-item-link" href="#branches">Филиалы</a></li>
+                            <li class="header__nav-item"><a class="header__nav-item-link" href="#">Преподаватели</a></li>
+                            <li class="header__nav-item"><a class="header__nav-item-link" href="#instructors">Инструкторы</a></li>
+                            <li class="header__nav-item"><a class="header__nav-item-link" href="#">Наш автопарк</a></li>
+                            <li class="header__nav-item"><a class="header__nav-item-link" href="#">Наш автодром</a></li>
+                            <li class="header__nav-item"><a class="header__nav-item-link" href="#">Отзывы</a></li>
+                            <li class="header__nav-item"><a class="header__nav-item-link" href="#contacts">Контакты</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="driving-school-wrapper">
+                <section class="driving-school">
+                    <h2 class="driving-school__title">Автошкола<br>в Санкт-Петербурге</h2>
+                    <p class="driving-school__text">Проходите обучение как вам удобно — в группе выходного дня, по вечерам или онлайн</p>
+                    <button class="driving-school__button">Записаться</button>
+                </section>
+                <div class="green-background">
+                    <img class="green-background__car" src="./assets/images/car1.png" alt="">
+                </div>
+            </div>
+            <div class="running-string">
+                <marquee class="running-string__block" behavior="scroll" direction="right">
+                    <span class="running-string__text">СПЕЦИАЛЬНЫЕ ПРЕДЛОЖЕНИЯ И АКЦИИ</span>
+                    <span class="running-string__text">СПЕЦИАЛЬНЫЕ ПРЕДЛОЖЕНИЯ И АКЦИИ</span>
+                    <span class="running-string__text">СПЕЦИАЛЬНЫЕ ПРЕДЛОЖЕНИЯ И АКЦИИ</span>
+                    <span class="running-string__text">СПЕЦИАЛЬНЫЕ ПРЕДЛОЖЕНИЯ И АКЦИИ</span>
+                    <span class="running-string__text">СПЕЦИАЛЬНЫЕ ПРЕДЛОЖЕНИЯ И АКЦИИ</span>
+                </marquee>
+            </div>
+            <div class="our-branches-wrapper" id="branches">
+                <section class="our-branches">
+                    <h2 class="our-branches__title">Наши филиалы</h2>
+                    <div class="our-branches__block">
+                        <button class="our-branches__button classes active">Учебные классы</button>
+                        <button class="our-branches__button autodrom">Автодром</button>
+                        <div class="our-branches__locations classes-branch visible">
+                            <div class="our-branches__item">
+                                <img class="our-branches__logo" src="./assets/icons/location1.svg" alt="">
+                                <span class="our-branches__text">Пр. Первый, 31-1</span>
+                            </div>
+                            <div class="our-branches__item">
+                                <img class="our-branches__logo" src="./assets/icons/location1.svg" alt="">
+                                <span class="our-branches__text">Ул. Вторая,5-1</span>
+                            </div>
+                            <div class="our-branches__item">
+                                <img class="our-branches__logo" src="./assets/icons/location1.svg" alt="">
+                                <span class="our-branches__text">Пр. Третий,11-1</span>
+                            </div>
+                            <div class="our-branches__item">
+                                <img class="our-branches__logo" src="./assets/icons/location1.svg" alt="">
+                                <span class="our-branches__text">Ул. Четвертая,22-1</span>
+                            </div>
+                        </div>
+                        <div class="our-branches__locations autodrom-branch">
+                            <div class="our-branches__item">
+                                <img class="our-branches__logo" src="./assets/icons/location1.svg" alt="">
+                                <span class="our-branches__text">Ул. Третья,д.119</span>
+                            </div>
+                            <div class="our-branches__item">
+                                <img class="our-branches__logo" src="./assets/icons/location1.svg" alt="">
+                                <span class="our-branches__text">Ул. Четвертая,д.14</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="our-instructors-wrapper" id="instructors">
+                <section class="our-instructors">
+                    <div class="our-instructors__wrapper">
+                        <h2 class="our-instructors__title">Наши<br>инструкторы</h2>
+                        <div class="our-instructors__info">
+                            <h3 class="our-instructors__info-title">Любимов Игорь<br>Юрьевич</h3>
+                            <p class="our-instructors__info-description">Стаж вождения с 1996 г.<br>Инструктор с 2002 г.</p>
+                        </div>
+                        <div class="our-instructors__photos">
+                            <img class="our-instructors__photos-item active" src="./assets/images/instructor1.jpg" alt="">
+                            <img class="our-instructors__photos-item" src="./assets/images/instructor2.png" alt="">
+                            <img class="our-instructors__photos-item" src="./assets/images/instructor3.png" alt="">
+                            <img class="our-instructors__photos-item" src="./assets/images/instructor4.png" alt="">
+                        </div>
+                    </div>
+                    <div class="our-instructors__wrapper">
+                        <div class="our-instructors__text-wrapper">
+                            <p class="our-instructors__text">Каждый инструктор имеет свидетельство, предоставляющее право на обучение вождению автотранспортными средствами. Все инструкторы проходят повышение квалификации по программе «Преподаватель автомобильной школы по обучению практике управления автотранспортным средством»</p>
+                        </div>
+                        <div class="our-instructors__navigation">
+                            <span class="our-instructors__navigation-element">1</span>
+                            <span class="our-instructors__navigation-element2"> /4</span>
+                            <button class="our-instructors__navigation-button left"></button>
+                            <button class="our-instructors__navigation-button right"></button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="questions-wrapper">
+                <div class="questions__first-block">
+                    <h2 class="questions__first-block-title">Часто<br>задаваемые<br>вопросы</h2>
+                    <img class="questions__first-block-image" src="./assets/images/car2.png" alt="">
+                </div>
+                <div class="questions__second-block">
+                    <div class="questions__item">
+                        <p class="questions__text">Если прописка не в Санкт-Петербурге, могу ли я обучаться и сдавать экзамены в этом городе?</p>
+                        <button class="questions__button"></button>
+                        <p class="questions__text-answer">По новому закону для автошколы и ГИБДД не имеет значения прописка, обучаться и сдавать экзамены может любой россиянин. Немного другая ситуация с иностранными гражданами. Чтобы обучаться и сдавать экзамены в ГИБДД, вам потребуется временная регистрация в Санкт-Петербурге или Ленинградской области сроком не менее 6 месяцев.</p>
+                    </div>
+                    <div class="questions__item">
+                        <p class="questions__text">Какие документы нужны для поступления?</p>
+                        <button class="questions__button"></button>
+                    </div>
+                    <div class="questions__item">
+                        <p class="questions__text">На каких автомобилях проходит обучение?</p>
+                        <button class="questions__button"></button>
+                    </div>
+                    <div class="questions__item">
+                        <p class="questions__text">Можно ли заниматься теорией и практикой в разных филиалах?</p>
+                        <button class="questions__button"></button>
+                    </div>
+                    <div class="questions__item">
+                        <p class="questions__text">С какого возраста я могу приступить к обучение и сдавать экзамен в ГИБДД на получение водительского удостоверения?</p>
+                        <button class="questions__button"></button>
+                    </div>
+                    <div class="questions__button-wrapper">
+                        <button class="question__button left"></button>
+                        <button class="question__button right"></button>
+                    </div>
+                </div>
+            </div>
+            <div class="how-to-find-wrapper">
+                <section class="how-to-find">
+                    <h2 class="how-to-find__title">Как нас найти</h2>
+                    <div class="how-to-find__btn-wrapper">
+                        <img class="how-to-find__btn-logo" src="./assets/icons/location.svg" alt="">
+                        <span class="how-to-find__btn-text">Калининский район</span>
+                        <button class="how-to-find__btn"></button>
+                        <div class="how-to-find__window-wrapper">
+                            <ul class="how-to-find__window-adresses">
+                                <li class="how-to-find__item"><a class="how-to-find__link" href="">Невский район</a></li>
+                                <li class="how-to-find__item"><a class="how-to-find__link" href="">Выборгский район</a></li>
+                                <li class="how-to-find__item"><a class="how-to-find__link" href="">Приморский район</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="how-to-find__map">
+                        <div class="how-to-find__window">
+                            <h3 class="how-to-find__window-title">Учебные классы</h3>
+                            <div class="how-to-find__item">
+                                <p class="how-to-find__address">Пр. Культуры, д. 31, к.1</p>
+                                <p class="how-to-find__time">С 12:30 до 19:00 по будням</p>
+                                <p class="how-to-find__entry">
+                                    <span class="how-to-find__entry-text">План входа</span>
+                                    <button class="how-to-find__entry-button"></button>
+                                </p>
+                            </div>
+                            <div class="how-to-find__line"></div>
+                            <div class="how-to-find__item">
+                                <p class="how-to-find__address">Ул. Ушинского, д. 5, к.1</p>
+                                <p class="how-to-find__time">С 12:30 до 19:30 по будням</p>
+                                <p class="how-to-find__entry">
+                                    <span class="how-to-find__entry-text">План входа</span>
+                                    <button class="how-to-find__entry-button"></button>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="contacts-wrapper" id="contacts">
+                <section class="contacts">
+                    <div class="contacts__first-block">
+                        <h2 class="contacts__title">Свяжитесь с нами!</h2>
+                        <img class="contacts__image" src="./assets/images/car3.png" alt="">
+                    </div>
+                    <div class="contacts__second-block">
+                        <h3 class="contacts__second-block-title">Оставьте свои<br>контактные данные</h3>
+                        <input class="contacts__second-block-input-name" placeholder="Имя">
+                        <input class="contacts__second-block-input-phone" type="tel" placeholder="Телефон">
+                        <div class="contacts__second-block-input__wrapper">
+                            <input class="contacts__second-block-input-button" type="checkbox" id="button">
+                            <label for="button"></label>
+                            <span class="contacts__second-block-text">Я согласен <a class="contacts__second-block-link" href="#contacts">c политикой конфиденциальности</a></span>
+                        </div>
+                        <button class="contacts__second-block-button">Отправить заявку</button>
+                    </div>
+                </section>
+            </div>
+        </main>
+        <footer>
+            <div class="footer__wrapper">
+                <div class="footer__first-block">
+                    <div class="footer__logo">Логотип</div>
+                    <div class="footer__navigation-wrapper">
+                        <nav class="footer__navigation">
+                            <ul class="footer__nav-list">
+                                <li class="footer__nav-item"><a class="footer__nav-item-link" href="#">Категории</a></li>
+                                <li class="footer__nav-item"><a class="footer__nav-item-link" href="#branches">Филиалы</a></li>
+                                <li class="footer__nav-item"><a class="footer__nav-item-link" href="#">Преподаватели</a></li>
+                                <li class="footer__nav-item"><a class="footer__nav-item-link" href="#instructors">Инструкторы</a></li>
+                                <li class="footer__nav-item"><a class="footer__nav-item-link" href="#">Наш автопарк</a></li>
+                                <li class="footer__nav-item"><a class="footer__nav-item-link" href="#">Наш автодром</a></li>
+                                <li class="footer__nav-item"><a class="footer__nav-item-link" href="#">Отзывы</a></li>
+                                <li class="footer__nav-item"><a class="footer__nav-item-link" href="#contacts">Контакты</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="footer__second-block">
+                    <div class="footer__text">© 2022 Все права защищены</div>
+                    <div class="footer__contacts-wrapper">
+                        <div class="footer__phone">
+                            <img class="footer__phone-logo" src="./assets/icons/phone_footer.svg" alt="">
+                            <a class="footer__phone-text" href="tel:1111111111">(111) 111-11-11</a>
+                            <a class="footer__phone-text" href="tel:9999999999">(999) 999-99-99</a>
+                        </div>
+                        <div class="footer__email">
+                            <a class="footer__email-link" href="mailto:info@asp.ru">info@asp.ru</a>
+                        </div>
+                        <div class="footer__social-medias">
+                            <a class="footer__link" href="#contacts"><img class="footer__social-media-logo" src="./assets/icons/inst.svg" alt=""></a>
+                            <a class="footer__link" href="#contacts"><img class="footer__social-media-logo" src="./assets/icons/vk.svg" alt=""></a>
+                            <a class="footer__link" href="#contacts"><img class="footer__social-media-logo" src="./assets/icons/facebook.svg" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>
