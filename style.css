@@ -11,6 +11,7 @@
     src: url('./assets/fonts/Inter-Bold.ttf');
 }
 
+
 html {
     font-family: 'Inter';
     scroll-behavior: smooth;
