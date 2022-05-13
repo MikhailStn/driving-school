@@ -124,10 +124,12 @@
                             <p class="our-instructors__info-description">Стаж вождения с 1996 г.<br>Инструктор с 2002 г.</p>
                         </div>
                         <div class="our-instructors__photos">
-                            <img class="our-instructors__photos-item active" src="./assets/images/instructor1.jpg" alt="">
-                            <img class="our-instructors__photos-item" src="./assets/images/instructor2.png" alt="">
-                            <img class="our-instructors__photos-item" src="./assets/images/instructor3.png" alt="">
-                            <img class="our-instructors__photos-item" src="./assets/images/instructor4.png" alt="">
+                            <div class="our-instructors__slider">
+                                <div class="our-instructors__slider-item"><img class="our-instructors__photos-item-active" src="./assets/images/instructor1active.jpg" alt=""></div>
+                                <div class="our-instructors__slider-item"><img class="our-instructors__photos-item" src="./assets/images/instructor2.jpg" alt=""></div>
+                                <div class="our-instructors__slider-item"><img class="our-instructors__photos-item" src="./assets/images/instructor3.jpg" alt=""></div>
+                                <div class="our-instructors__slider-item"><img class="our-instructors__photos-item" src="./assets/images/instructor4.jpg" alt=""></div>
+                            </div>
                         </div>
                     </div>
                     <div class="our-instructors__wrapper">
@@ -136,7 +138,7 @@
                         </div>
                         <div class="our-instructors__navigation">
                             <span class="our-instructors__navigation-element">1</span>
-                            <span class="our-instructors__navigation-element2"> /4</span>
+                            <span class="our-instructors__navigation-element2">/4</span>
                             <button class="our-instructors__navigation-button left"></button>
                             <button class="our-instructors__navigation-button right"></button>
                         </div>
@@ -185,17 +187,18 @@
                         <button class="how-to-find__btn"></button>
                         <div class="how-to-find__window-wrapper">
                             <ul class="how-to-find__window-adresses">
-                                <li class="how-to-find__item"><a class="how-to-find__link" href="">Невский район</a></li>
-                                <li class="how-to-find__item"><a class="how-to-find__link" href="">Выборгский район</a></li>
-                                <li class="how-to-find__item"><a class="how-to-find__link" href="">Приморский район</a></li>
+                                <li class="how-to-find__item"><a class="how-to-find__link" id="first">Невский район</a></li>
+                                <li class="how-to-find__item"><a class="how-to-find__link" id="second">Выборгский район</a></li>
+                                <li class="how-to-find__item"><a class="how-to-find__link" id="third">Приморский район</a></li>
                             </ul>
                         </div>
                     </div>
-                    <div class="how-to-find__map">
+                    <div class="how-to-find__map" id="map">
+                        <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d995.9093055040354!2d30.3807148!3d60.0512345!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x469634af3bc4d433%3A0xf289dab1e9de7a22!2z0L_RgC4g0JrRg9C70YzRgtGD0YDRiywgMzEsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTUyNzY!5e0!3m2!1sru!2sru!4v1652406359371!5m2!1sru!2sru"; allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         <div class="how-to-find__window">
                             <h3 class="how-to-find__window-title">Учебные классы</h3>
                             <div class="how-to-find__item">
-                                <p class="how-to-find__address">Пр. Культуры, д. 31, к.1</p>
+                                <p class="how-to-find__address adress-first">Пр. Культуры, д. 31, к.1</p>
                                 <p class="how-to-find__time">С 12:30 до 19:00 по будням</p>
                                 <p class="how-to-find__entry">
                                     <span class="how-to-find__entry-text">План входа</span>
@@ -204,7 +207,7 @@
                             </div>
                             <div class="how-to-find__line"></div>
                             <div class="how-to-find__item">
-                                <p class="how-to-find__address">Ул. Ушинского, д. 5, к.1</p>
+                                <p class="how-to-find__address adress-second">Ул. Ушинского, д. 5, к.1</p>
                                 <p class="how-to-find__time">С 12:30 до 19:30 по будням</p>
                                 <p class="how-to-find__entry">
                                     <span class="how-to-find__entry-text">План входа</span>
@@ -221,6 +224,33 @@
                         <h2 class="contacts__title">Свяжитесь с нами!</h2>
                         <img class="contacts__image" src="./assets/images/car3.png" alt="">
                     </div>
+                    <div class="contacts__pop-up">
+                        <div class="pop-up__grey-bg"></div>
+                        <div class="pop-up__wrapper">
+                            <h3 class="contacts__second-block-title">Оставьте свои<br>контактные данные</h3>
+                            <input class="contacts__second-block-input-name pop-up__name" placeholder="Имя">
+                            <input class="contacts__second-block-input-phone pop-up__phone" type="tel" placeholder="Телефон">
+                            <div class="contacts__second-block-input__wrapper">
+                                <input class="contacts__second-block-input-button pop-up__button-check" type="checkbox" id="button1">
+                                <label for="button1"></label>
+                                <span class="contacts__second-block-text">Я согласен <a class="contacts__second-block-link" href="#contacts">c политикой конфиденциальности</a></span>
+                            </div>
+                            <button class="contacts__second-block-button pop-up__button">Отправить заявку</button>
+                        </div>
+                    </div>
+                    <div class="contacts__pop-up-done">
+                        <div class="pop-up__grey-bg"></div>
+                        <div class="pop-up-done__wrapper">
+                            <div class="pop-up-done__button-wrapper">
+                                <button class="pop-up-done__button"></button>
+                            </div>
+                            <div class="pop-up-done__logo">
+                                <img src="./assets/images/popuplogo.png" alt="">
+                            </div>
+                            <div class="pop-up-done__title">Ваша заявка<br>отправлена!</div>
+                            <div class="pop-up-done__text">Специалисты свяжутся с вами в ближайшее время<br>и помогут в оформлении записи</div>
+                        </div>
+                    </div>
                     <div class="contacts__second-block">
                         <h3 class="contacts__second-block-title">Оставьте свои<br>контактные данные</h3>
                         <input class="contacts__second-block-input-name" placeholder="Имя">
@@ -230,7 +260,7 @@
                             <label for="button"></label>
                             <span class="contacts__second-block-text">Я согласен <a class="contacts__second-block-link" href="#contacts">c политикой конфиденциальности</a></span>
                         </div>
-                        <button class="contacts__second-block-button">Отправить заявку</button>
+                        <button class="contacts__second-block-button request-button">Отправить заявку</button>
                     </div>
                 </section>
             </div>
