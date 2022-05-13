@@ -1224,11 +1224,6 @@ footer {
         padding-left: 45px;
     }
 
-    .our-instructors__photos-item {
-        width: 95px;
-        height: 100px;
-    }
-
     .our-instructors__photos {
         width: 900px;
     }
@@ -1350,6 +1345,9 @@ footer {
 .our-instructors__slider-item {
     position: relative;
     overflow: hidden;
+    width: 190px;
+    display: flex;
+    justify-content: center;
 }
 
 .our-instructors__slider-item-active {
@@ -1366,6 +1364,7 @@ footer {
 
 .our-instructors__photos-item {
     position: relative;
+    width: 190px;
 }
 
 .map {

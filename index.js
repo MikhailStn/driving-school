@@ -10,8 +10,6 @@ const questionsBlock = document.querySelector('.questions__item');
 const questionsBtn = document.querySelector('.questions__button')
 const questionsAnswer = document.querySelector('.questions__text-answer')
 
-
-
 const changeClassActive = () => {
     btnClasses.classList.remove('active')
     btnAutodram.classList.add('active')
@@ -40,37 +38,56 @@ const showAnswer = () => {
     questionsAnswer.classList.toggle('opened')
 }
 
-
 btnAutodram.addEventListener('click', changeClassActive)
 btnClasses.addEventListener('click', changeClassActiveSecond)
 addressButton.addEventListener('click', changeClassAddressWindow)
 districtsBtn.addEventListener('click', showDistrictsWindow)
 questionsBtn.addEventListener('click', showAnswer)
 
-
 /* slider */
 
 const leftButtonSlider = document.querySelector('.our-instructors__navigation-button.left')
 const rightButtonSlider = document.querySelector('.our-instructors__navigation-button.right')
-const activePhoto = document.querySelector('.our-instructors__photos-item-active')
+const activePhoto = document.querySelectorAll('.our-instructors__photos-item-active')
 const sliderPhotos = document.querySelectorAll('.our-instructors__photos-item')
 const countSlider = document.querySelector('.our-instructors__navigation-element')
 
 const moveRight = () => {
-    let path = activePhoto.getAttribute('src');
-    let path2 = sliderPhotos[0].getAttribute('src')
-    let path3 = sliderPhotos[1].getAttribute('src')
-    let path4 = sliderPhotos[2].getAttribute('src')
-    let i = path[26]
-    let j = path2[26]
-    let x = path3[26]
-    let y = path4[26]
+
+    let path00 = activePhoto[0].getAttribute('src')
+    let path01 = activePhoto[1].getAttribute('src')
+    let path02 = activePhoto[2].getAttribute('src')
+
+    let path0 = sliderPhotos[0].getAttribute('src')
+    let path1 = sliderPhotos[1].getAttribute('src')
+    let path2 = sliderPhotos[2].getAttribute('src')
+    
+    let o = path00[26]
+    let i = path01[26]
+    let p = path02[26]
+
+    let j = path0[26]
+    let x = path1[26]
+    let y = path2[26]
+
     let z = countSlider.innerHTML
-    if (i < 4) {
-        activePhoto.setAttribute('src', `./assets/images/instructor${++i}active.jpg`)
-    } else if (i >= 4) {
-        activePhoto.setAttribute('src', `./assets/images/instructor${1}active.jpg`)
+
+    if (o < 4) {
+        activePhoto[0].setAttribute('src', `./assets/images/instructor${++o}active.jpg`)
+    } else if (o >= 4) {
+        activePhoto[0].setAttribute('src', `./assets/images/instructor${1}active.jpg`)
     }
+    if (i < 4) {
+        activePhoto[1].setAttribute('src', `./assets/images/instructor${++i}active.jpg`)
+    } else if (i >= 4) {
+        activePhoto[1].setAttribute('src', `./assets/images/instructor${1}active.jpg`)
+    }
+    if (p < 4) {
+        activePhoto[2].setAttribute('src', `./assets/images/instructor${++p}active.jpg`)
+    } else if (p >= 4) {
+        activePhoto[2].setAttribute('src', `./assets/images/instructor${1}active.jpg`)
+    }
+
     if (j < 4) {
         sliderPhotos[0].setAttribute('src', `./assets/images/instructor${++j}.jpg`)
     } else if (j >= 4) {
@@ -91,49 +108,116 @@ const moveRight = () => {
     } else if (z >= 4) {
         countSlider.innerHTML = `1`
     }
+
+    let path3 = sliderPhotos[3].getAttribute('src')
+    let path4 = sliderPhotos[4].getAttribute('src')
+    let path5 = sliderPhotos[5].getAttribute('src')
+
+    let q = path3[26]
+    let w = path4[26]
+    let e = path5[26]
+
+    if (q < 4) {
+        sliderPhotos[3].setAttribute('src', `./assets/images/instructor${++q}.jpg`)
+    } else if (q >= 4) {
+        sliderPhotos[3].setAttribute('src', `./assets/images/instructor${1}.jpg`)
+    }
+    if (w < 4) {
+        sliderPhotos[4].setAttribute('src', `./assets/images/instructor${++w}.jpg`)
+    } else if (w >= 4) {
+        sliderPhotos[4].setAttribute('src', `./assets/images/instructor${1}.jpg`)
+    }
+    if (e < 4) {
+        sliderPhotos[5].setAttribute('src', `./assets/images/instructor${++e}.jpg`)
+    } else if (e >= 4) {
+        sliderPhotos[5].setAttribute('src', `./assets/images/instructor${1}.jpg`)
+    }
+
+    let path6 = sliderPhotos[6].getAttribute('src')
+    let path7 = sliderPhotos[7].getAttribute('src')
+    let path8 = sliderPhotos[8].getAttribute('src')
+
+    let r = path6[26]
+    let t = path7[26]
+    let u = path8[26]
+
+    if (r < 4) {
+        sliderPhotos[6].setAttribute('src', `./assets/images/instructor${++r}.jpg`)
+    } else if (r >= 4) {
+        sliderPhotos[6].setAttribute('src', `./assets/images/instructor${1}.jpg`)
+    }
+    if (t < 4) {
+        sliderPhotos[7].setAttribute('src', `./assets/images/instructor${++t}.jpg`)
+    } else if (t >= 4) {
+        sliderPhotos[7].setAttribute('src', `./assets/images/instructor${1}.jpg`)
+    }
+    if (u < 4) {
+        sliderPhotos[8].setAttribute('src', `./assets/images/instructor${++u}.jpg`)
+    } else if (u >= 4) {
+        sliderPhotos[8].setAttribute('src', `./assets/images/instructor${1}.jpg`)
+    }
 }
 
 const removeClassesRight = () => {
     sliderPhotos.forEach(el => el.addEventListener('animationend', () => {
         sliderPhotos.forEach(el => el.classList.remove('transition-right'))
-        activePhoto.classList.remove('transition-right')
+        activePhoto.forEach(el => el.classList.remove('transition-right'))
     }))
 }
 
 const scrollRight = () => {
     sliderPhotos.forEach(el => el.classList.add('transition-right'))
-    activePhoto.classList.add('transition-right')
+    activePhoto.forEach(el => el.classList.add('transition-right'))
     removeClassesRight()
 }
 
 const removeClassesLeft = () => {
     sliderPhotos.forEach(el => el.addEventListener('animationend', () => {
         sliderPhotos.forEach(el => el.classList.remove('transition-left'))
-        activePhoto.classList.remove('transition-left')
+        activePhoto.forEach(el => el.classList.remove('transition-left'))
     }))
 }
 
 const scrollLeft = () => {
     sliderPhotos.forEach(el => el.classList.add('transition-left'))
-    activePhoto.classList.add('transition-left')
+    activePhoto.forEach(el => el.classList.add('transition-left'))
     removeClassesLeft()
 }
 
 const moveLeft = () => {
-    let path = activePhoto.getAttribute('src');
-    let path2 = sliderPhotos[0].getAttribute('src')
-    let path3 = sliderPhotos[1].getAttribute('src')
-    let path4 = sliderPhotos[2].getAttribute('src')
-    let i = path[26]
-    let j = path2[26]
-    let x = path3[26]
-    let y = path4[26]
+    let path00 = activePhoto[0].getAttribute('src')
+    let path01 = activePhoto[1].getAttribute('src')
+    let path02 = activePhoto[2].getAttribute('src')
+
+    let path0 = sliderPhotos[0].getAttribute('src')
+    let path1 = sliderPhotos[1].getAttribute('src')
+    let path2 = sliderPhotos[2].getAttribute('src')
+
+    let o = path00[26]
+    let i = path01[26]
+    let p = path02[26]
+
+    let j = path0[26]
+    let x = path1[26]
+    let y = path2[26]
     let z = countSlider.innerHTML
-    if (i > 1) {
-        activePhoto.setAttribute('src', `./assets/images/instructor${--i}active.jpg`)
+
+    if (o > 1) {
+        activePhoto[0].setAttribute('src', `./assets/images/instructor${--o}active.jpg`)
     } else {
-        activePhoto.setAttribute('src', `./assets/images/instructor${4}active.jpg`)
+        activePhoto[0].setAttribute('src', `./assets/images/instructor${4}active.jpg`)
     }
+    if (i > 1) {
+        activePhoto[1].setAttribute('src', `./assets/images/instructor${--i}active.jpg`)
+    } else {
+        activePhoto[1].setAttribute('src', `./assets/images/instructor${4}active.jpg`)
+    }
+    if (p > 1) {
+        activePhoto[2].setAttribute('src', `./assets/images/instructor${--p}active.jpg`)
+    } else {
+        activePhoto[2].setAttribute('src', `./assets/images/instructor${4}active.jpg`)
+    }
+
     if (j > 1) {
         sliderPhotos[0].setAttribute('src', `./assets/images/instructor${--j}.jpg`)
     } else {
@@ -154,26 +238,73 @@ const moveLeft = () => {
     } else {
         countSlider.innerHTML = `4`
     }
+
+    let path3 = sliderPhotos[3].getAttribute('src')
+    let path4 = sliderPhotos[4].getAttribute('src')
+    let path5 = sliderPhotos[5].getAttribute('src')
+
+    let q = path3[26]
+    let w = path4[26]
+    let e = path5[26]
+
+    if (q > 1) {
+        sliderPhotos[3].setAttribute('src', `./assets/images/instructor${--q}.jpg`)
+    } else {
+        sliderPhotos[3].setAttribute('src', `./assets/images/instructor${4}.jpg`)
+    }
+    if (w > 1) {
+        sliderPhotos[4].setAttribute('src', `./assets/images/instructor${--w}.jpg`)
+    } else {
+        sliderPhotos[4].setAttribute('src', `./assets/images/instructor${4}.jpg`)
+    }
+    if (e > 1) {
+        sliderPhotos[5].setAttribute('src', `./assets/images/instructor${--e}.jpg`)
+    } else {
+        sliderPhotos[5].setAttribute('src', `./assets/images/instructor${4}.jpg`)
+    }
+
+    let path6 = sliderPhotos[6].getAttribute('src')
+    let path7 = sliderPhotos[7].getAttribute('src')
+    let path8 = sliderPhotos[8].getAttribute('src')
+
+    let r = path6[26]
+    let t = path7[26]
+    let u = path8[26]
+
+    if (r > 1) {
+        sliderPhotos[6].setAttribute('src', `./assets/images/instructor${--r}.jpg`)
+    } else {
+        sliderPhotos[6].setAttribute('src', `./assets/images/instructor${4}.jpg`)
+    }
+    if (t > 1) {
+        sliderPhotos[7].setAttribute('src', `./assets/images/instructor${--t}.jpg`)
+    } else {
+        sliderPhotos[7].setAttribute('src', `./assets/images/instructor${4}.jpg`)
+    }
+    if (u > 1) {
+        sliderPhotos[8].setAttribute('src', `./assets/images/instructor${--u}.jpg`)
+    } else {
+        sliderPhotos[8].setAttribute('src', `./assets/images/instructor${4}.jpg`)
+    }
 }
 
 const delete1 = () => {
-    activePhoto.removeEventListener('animationend', moveRight)
+    activePhoto.forEach(el => el.removeEventListener('animationend', moveRight))
 }
 
 const delete2 = () => {
-    activePhoto.removeEventListener('animationend', moveLeft)
+    activePhoto.forEach(el => el.removeEventListener('animationend', moveLeft))
 }
 
 rightButtonSlider.addEventListener('click', scrollLeft)
-rightButtonSlider.addEventListener('click', () => activePhoto.addEventListener('animationend', moveRight))
-rightButtonSlider.addEventListener('click', () => setTimeout(() => activePhoto.removeEventListener('animationend', moveRight), 1100))
+rightButtonSlider.addEventListener('click', () => activePhoto.forEach(el => el.addEventListener('animationend', moveLeft)))
+rightButtonSlider.addEventListener('click', () => setTimeout(() => activePhoto.forEach(el => el.removeEventListener('animationend', moveLeft)), 1100))
 rightButtonSlider.addEventListener('click', () => rightButtonSlider.setAttribute('disabled', 'disabled'))
 rightButtonSlider.addEventListener('click', () => setTimeout(() => rightButtonSlider.removeAttribute('disabled', 'disabled'), 1100))
 
-
 leftButtonSlider.addEventListener('click', scrollRight)
-leftButtonSlider.addEventListener('click', () => activePhoto.addEventListener('animationend', moveLeft))
-leftButtonSlider.addEventListener('click', () => setTimeout(() => activePhoto.removeEventListener('animationend', moveLeft), 1100))
+leftButtonSlider.addEventListener('click', () => activePhoto.forEach(el => el.addEventListener('animationend', moveRight)))
+leftButtonSlider.addEventListener('click', () => setTimeout(() => activePhoto.forEach(el => el.removeEventListener('animationend', moveRight)), 1100))
 leftButtonSlider.addEventListener('click', () => leftButtonSlider.setAttribute('disabled', 'disabled'))
 leftButtonSlider.addEventListener('click', () => setTimeout(() => leftButtonSlider.removeAttribute('disabled', 'disabled'), 1100))
 
@@ -303,4 +434,3 @@ popUpBg.addEventListener('click', togglePopUp)
 closePopUp.addEventListener('click', togglePopUpDone)
 sendRequest.addEventListener('click', check)
 sendRequest.addEventListener('click', () => setTimeout(() => sendRequest.removeAttribute('disabled', 'disabled'), 1000))
-
