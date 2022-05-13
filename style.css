@@ -1352,6 +1352,14 @@ footer {
     overflow: hidden;
 }
 
+.our-instructors__slider-item-active {
+    position: relative;
+    overflow: hidden;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+}
+
 .our-instructors__photos-item-active {
     position: relative;
 }
